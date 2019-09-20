@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId 'gov.nasa.worldwindx.examples'
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 11
+        versionName '0.9.0'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    lintOptions {
+        abortOnError false
+        disable 'GradleDependency'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation project(':worldwind')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'mil.army.missioncommand:mil-sym-android-renderer:0.1.36'
+    implementation 'com.google.android.gms:play-services-ads:18.2.0'
+    implementation 'com.google.firebase:firebase-ads:18.2.0'
+}

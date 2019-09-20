@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="gov.nasa.worldwindx">
+
+    <!-- Include required permissions for Google Mobile Ads to run. -->
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/earth"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme">
+
+        <activity
+            android:name=".GeneralGlobeActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_general_globe"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:theme="@style/MyTheme">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".BasicGlobeActivity"
+            android:theme="@style/MyTheme"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7138654702020421~3359674248"/>
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>
