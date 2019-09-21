@@ -42,14 +42,11 @@ public abstract class AbstractMainActivity extends AppCompatActivity {
     public AdView mAdView;
     // protected static int selectedItemId = R.id.nav_general_globe_activity;
 
-    protected Handler handler = new Handler(new Handler.Callback() {
-        @Override
-        public boolean handleMessage(Message msg) {
-            if (msg.what == PRINT_METRICS) {
-                return printMetrics();
-            } else {
-                return false;
-            }
+    protected Handler handler = new Handler(msg -> {
+        if (msg.what == PRINT_METRICS) {
+            return printMetrics();
+        } else {
+            return false;
         }
     });
 
@@ -74,6 +71,7 @@ public abstract class AbstractMainActivity extends AppCompatActivity {
     }
 
     protected void onCreate() {
+       // getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         //прокаженная реклама
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
