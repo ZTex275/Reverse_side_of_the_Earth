@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:60407606714:android:6aee772c71e8fdb78ec183",
         "android_client_info": {
-          "package_name": "gov.nasa.worldwindx.examples"
+          "package_name": "gov.side.rsote.examples"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "60407606714-ekcje8m076276qkq57ene4439k6peuq5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "gov.nasa.worldwindx.examples",
+            "package_name": "gov.side.rsote.examples",
             "certificate_hash": "260571541bbe0eb565b4df0f5a460758ee01f41d"
           }
         },

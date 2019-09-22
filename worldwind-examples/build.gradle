@@ -4,11 +4,11 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     defaultConfig {
-        applicationId 'gov.nasa.worldwindx.examples'
+        applicationId 'gov.side.rsote.examples'
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 11
-        versionName '0.9.0'
+        versionCode 1
+        versionName '1.0'
     }
     buildTypes {
         release {

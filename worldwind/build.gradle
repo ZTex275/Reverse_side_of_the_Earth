@@ -74,7 +74,7 @@ publishing {
            // artifact bundleReleaseAar
             //artifact bundleSourcesJar
             //artifact bundleJavadocJar
-            groupId 'gov.nasa.worldwind.android'
+            groupId 'gov.side.worldwind.android'
             artifactId 'worldwind'
             version android.defaultConfig.versionName
             pom.withXml {

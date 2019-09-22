@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="gov.nasa.worldwindx">
+    package="gov.side.rsote">
 
     <!-- Include required permissions for Google Mobile Ads to run. -->
     <application
@@ -11,7 +11,7 @@
         android:theme="@style/MyTheme">
 
         <activity
-            android:name=".GeneralGlobeActivity"
+            android:name="gov.side.rsote.GeneralGlobeActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/title_general_globe"
             android:launchMode="singleInstance"
@@ -25,7 +25,7 @@
         </activity>
 
         <activity
-            android:name=".BasicGlobeActivity"
+            android:name="gov.side.rsote.BasicGlobeActivity"
             android:theme="@style/MyTheme"/>
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
