@@ -12,7 +12,11 @@ import androidx.annotation.LayoutRes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Date;
@@ -72,7 +76,9 @@ public abstract class AbstractMainActivity extends AppCompatActivity {
        // getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         //прокаженная реклама
         mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .build();
         mAdView.loadAd(adRequest);
 
         //клик на плавающую кнопку
@@ -110,8 +116,6 @@ public abstract class AbstractMainActivity extends AppCompatActivity {
                 wwd.getNavigator().setAsCamera(wwd.getGlobe(), camera);
 
                 Toast.makeText(getApplicationContext(), "Reverse side of the Earth!", Toast.LENGTH_LONG).show();
-
-
             }
         });
     }
